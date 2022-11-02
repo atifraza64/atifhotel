@@ -25,12 +25,8 @@ Route::prefix('admin')->namespace('admin')->group(function(){
 		});
 });
 
-Route::prefix('customer')->namespace('customer')->group(function(){
-
+Route::prefix('customer')->middleware('auth')->namespace('customer')->group(function(){
 	Route::get('dashboard','pagesController@dashbaord')->name('customer.dashboard');
-	Route::get('rooms',function(){
-		return "rooms";
-	});
 });
 
 
@@ -49,4 +45,4 @@ Route::prefix('customer')->namespace('customer')->group(function(){
 
 Auth::routes();
 
-//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
