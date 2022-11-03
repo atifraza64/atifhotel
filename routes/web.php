@@ -17,11 +17,12 @@ use Illuminate\Support\Facades\Route;
 	Route::get('/about', 'pagesController@about')->name('about');
 	Route::get('/contact', 'pagesController@contact')->name('contact');
 	Route::get('/rooms', 'pagesController@rooms')->name('rooms');
-
+	Route::get('admin/login','admin\pagesController@login')->name('admin.login');
+	Route::post('admin/login/check','admin\pagesController@login_check')->name('admin.logini');
      ////---------------------Admin side--------------------////
-    Route::prefix('admin')->namespace('admin')->group(function(){
+    Route::prefix('admin')->middleware('admin')->namespace('admin')->group(function(){
 	        ////---------------------Login--------------------////
-	        Route::get('login','pagesController@login')->name('admin.login');
+	        
 	        ////---------------------Dashboard--------------------////	
 			Route::get('dashboard','pagesController@dashboard')->name('admin.dashboard');
 			////---------------------Bookings--------------------////
@@ -52,18 +53,18 @@ use Illuminate\Support\Facades\Route;
 
 
 
-// Route::get('/about',function(){
-//     return view('about');
-// });
+	// Route::get('/about',function(){
+	//     return view('about');
+	// });
 
-// Route::get('/contact',function(){
-//     return view('contact');
-// });
+	// Route::get('/contact',function(){
+	//     return view('contact');
+	// });
 
-// Route::get('/services',function(){
-//     return view('services');
-// });
+	// Route::get('/services',function(){
+	//     return view('services');
+	// });
 
-	Auth::routes();
+		Auth::routes();
 
-	Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+		Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

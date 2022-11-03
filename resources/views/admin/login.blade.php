@@ -27,11 +27,20 @@
                         <div class="login-right-wrap">
                             <h1>Login</h1>
                             <p class="account-subtitle">Access to our dashboard</p>
-                            <form action="index.html">
+                            <form action="{{ route('admin.logini') }}" method="post">
+                                @csrf
                                 <div class="form-group">
-                                    <input class="form-control" type="text" placeholder="Email"> </div>
+                                    <input class="form-control" type="text" name="email" placeholder="Email"> 
+                                    @error('email')
+                                    <font color="red"><b>{{ $message }}</b></font>
+                                    @enderror
+                                </div>
                                 <div class="form-group">
-                                    <input class="form-control" type="text" placeholder="Password"> </div>
+                                    <input class="form-control" type="password" name="password" placeholder="Password"> 
+                                    @error('password')
+                                    <font color="red"><b>{{ $message }}</b></font>
+                                    @enderror
+                                </div>
                                 <div class="form-group">
                                     <button class="btn btn-primary btn-block" type="submit">Login</button>
                                 </div>

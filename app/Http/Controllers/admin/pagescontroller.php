@@ -4,13 +4,27 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
+use Auth;
 class pagescontroller extends Controller
 {
     //
     public function login(){
         return view('admin.login');
     }
+    public function login_check(Request $request){
+        $validated = $request->validate([
+            'email' => 'required',
+            'password' => 'required',
+        ]);
+        if (Auth::attempt(['email' => $request->email, 'password' => $request->password, 'type' => 1])) {
+            // The user is active, not suspended, and exists.
+            return redirect(route('admin.dashboard'));
+        } else {
+            // admin login ..
+            return redirect(route('admin.login'));
+        }
+    }
+
     public function dashboard(){
         return view('admin.dashboard');
     }
