@@ -51,7 +51,7 @@ use Illuminate\Support\Facades\Route;
 		Route::get('dashboard','pagesController@dashbaord')->name('customer.dashboard');
 		Route::get('accounts','accountsController@dashboard')->name('accounts.dashboard');
 		Route::get('reservation','reservationController@dashboard')->name('reservation.dashboard');
-		Route::get('profile','profilesetController@dashboard')->name('profile.dashboard');
+		Route::get('profile','profileController@dashboard')->name('profile.dashboard');
 	});
 
 

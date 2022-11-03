@@ -8,4 +8,7 @@ use Illuminate\Http\Request;
 class reservationController extends Controller
 {
     //
+    public function dashboard(){
+        return view('customer.reservation');
+    }
 }

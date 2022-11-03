@@ -8,4 +8,7 @@ use Illuminate\Http\Request;
 class settingsController extends Controller
 {
     //
+    public function dashboard(){
+        return view('customer.settings');
+    }
 }

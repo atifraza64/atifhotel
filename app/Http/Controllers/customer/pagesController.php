@@ -9,7 +9,6 @@ class pagesController extends Controller
 {
     //
     public function dashbaord(){
-
         return view('customer.dashboard');
     }
 }

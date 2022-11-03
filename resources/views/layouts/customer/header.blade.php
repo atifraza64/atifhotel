@@ -235,7 +235,7 @@
                     </ul>
                   </div>
                 </div>
-                <div class="p-15 p-b-0">
+                {{-- <div class="p-15 p-b-0">
                   <form class="form-material">
                     <div class="form-group form-primary">
                       <input type="text" name="footer-email" class="form-control" required="">
@@ -243,16 +243,17 @@
                       <label class="float-label"><i class="fa fa-search m-r-10"></i>Search Friend</label>
                     </div>
                   </form>
-                </div>
+                </div> --}}
                 <div class="pcoded-navigation-label" data-i18n="nav.category.navigation">Layout</div>
                 <ul class="pcoded-item pcoded-left-item">
                   <li class="active">
-                    <a href="index.html" class="waves-effect waves-dark">
+                    <a href="{{route('customer.dashboard')}}" class="waves-effect waves-dark">
                       <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
                       <span class="pcoded-mtext" data-i18n="nav.dash.main">Dashboard</span>
                       <span class="pcoded-mcaret"></span>
                     </a>
-                  </li>
+                   </li>
+                   {{--
                   <li class="pcoded-hasmenu">
                     <a href="javascript:void(0)" class="waves-effect waves-dark">
                       <span class="pcoded-micon"><i class="ti-layout-grid2-alt"></i></span>
@@ -332,28 +333,35 @@
                       </li>
                       
                     </ul>
-                  </li>
+                  </li> --}}
                 </ul>
-                <div class="pcoded-navigation-label" data-i18n="nav.category.forms">Forms &amp; Tables</div>
+                <div class="pcoded-navigation-label" data-i18n="nav.category.forms">Other pages</div>
                 <ul class="pcoded-item pcoded-left-item">
                   <li>
-                    <a href="form-elements-component.html" class="waves-effect waves-dark">
+                    <a href="{{route('accounts.dashboard')}}" class="waves-effect waves-dark">
                       <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
-                      <span class="pcoded-mtext" data-i18n="nav.form-components.main">Form Components</span>
+                      <span class="pcoded-mtext" data-i18n="nav.form-components.main">Accounts</span>
                       <span class="pcoded-mcaret"></span>
                     </a>
                   </li>
                   <li>
-                    <a href="bs-basic-table.html" class="waves-effect waves-dark">
+                    <a href="{{route('reservation.dashboard')}}" class="waves-effect waves-dark">
                       <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
-                      <span class="pcoded-mtext" data-i18n="nav.form-components.main">Basic Table</span>
+                      <span class="pcoded-mtext" data-i18n="nav.form-components.main">Reservations</span>
+                      <span class="pcoded-mcaret"></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="{{route('profile.dashboard')}}" class="waves-effect waves-dark">
+                      <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                      <span class="pcoded-mtext" data-i18n="nav.form-components.main">Profile Settings</span>
                       <span class="pcoded-mcaret"></span>
                     </a>
                   </li>
                   
                 </ul>
                 
-                <div class="pcoded-navigation-label" data-i18n="nav.category.forms">Chart &amp; Maps</div>
+                {{-- <div class="pcoded-navigation-label" data-i18n="nav.category.forms">Chart &amp; Maps</div>
                 <ul class="pcoded-item pcoded-left-item">
                   <li>
                     <a href="chart.html" class="waves-effect waves-dark">
@@ -444,7 +452,7 @@
                       
                     </ul>
                   </li>
-                </ul>
+                </ul> --}}
               </div>
             </nav>
 
