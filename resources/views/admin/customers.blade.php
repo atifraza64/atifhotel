@@ -205,4 +205,11 @@
 					</div>
 				</div>
 			</div>
+			<script>
+	$(function() {
+		$('#datetimepicker3').datetimepicker({
+			format: 'LT'
+		});
+	});
+	</script>
 		@endsection

@@ -41,5 +41,11 @@ class pagescontroller extends Controller
     public function add_rooms(){
         return view('admin.add_rooms');
     }
+     public function settings(){
+        return view('admin.settings');
+    }
+    public function price(){
+        return view('admin.price');
+    }
 
 }

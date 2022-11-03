@@ -130,6 +130,8 @@
                                 <li><a href="{{ route('admin.add_rooms') }}"> Add Rooms </a></li>
                             </ul>
                         </li>
+                         <li> <a href="{{ route('admin.price') }}"><i class="far fa-money-bill-alt"></i> <span>Pricing</span></a> </li>
+                        <li> <a href="{{ route('admin.settings') }}"><i class="fas fa-cog"></i> <span>Settings</span></a> </li>
                         <li class="submenu"> <a href="#"><i class="fas fa-user"></i> <span> Staff </span> <span class="menu-arrow"></span></a>
                             <ul class="submenu_class" style="display: none;">
                                 <li><a href="all-staff.html">All Staff </a></li>
@@ -137,7 +139,7 @@
                                 <li><a href="add-staff.html"> Add Staff </a></li>
                             </ul>
                         </li>
-                        <li class="active"> <a href="pricing.html"><i class="far fa-money-bill-alt"></i> <span>Pricing</span></a> </li>
+                        
                        
                         <li class="submenu"> <a href="#"><i class="fas fa-user"></i> <span> Employees </span> <span class="menu-arrow"></span></a>
                             <ul class="submenu_class" style="display: none;">
@@ -162,7 +164,7 @@
                                 <li><a href="invoice-reports.html">Invoice Report </a></li>
                             </ul>
                         </li>
-                        <li> <a href="settings.html"><i class="fas fa-cog"></i> <span>Settings</span></a> </li>
+
                        
                         
                     </ul>
@@ -174,13 +176,12 @@
         </div>
     </div>
 
-<script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script src="{{ asset ('admin/js/jquery-3.5.1.min.js') }}"></script>
-    <script src="{{ asset ('admin/popper.min.js') }}"></script>
-    <script src="{{ asset ('admin/bootstrap.min.js') }}"></script>
-    <script src="{{ asset ('admin/plugins/slimscroll/jquery.slimscroll.min.js') }}"></script>
-    <script src="{{ asset ('admin/plugins/raphael/raphael.min.js') }}"></script>
-    <script src="{{ asset ('admin/plugins/morris/morris.min.js') }}"></script>
+ <script src="{{ asset ('admin/js/jquery-3.5.1.min.js') }}"></script>
+    <script src="{{ asset ('admin/js/popper.min.js') }}"></script>
+    <script src="{{ asset ('admin/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset ('admin/js/plugins/slimscroll/jquery.slimscroll.min.js') }}"></script>
+    <script src="{{ asset ('admin/js/plugins/raphael/raphael.min.js') }}"></script>
+    <script src="{{ asset ('admin/js/plugins/morris/morris.min.js') }}"></script>
     <script src="{{ asset ('admin/js/chart.morris.js') }}"></script>
     <script src="{{ asset ('admin/js/script.js') }}"></script>
 
