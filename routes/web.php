@@ -13,16 +13,34 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'pagesController@home')->name('home');
-Route::get('/about', 'pagesController@about')->name('about');
-Route::get('/contact', 'pagesController@contact')->name('contact');
-Route::get('/rooms', 'pagesController@rooms')->name('rooms');
+		Route::get('/', 'pagesController@home')->name('home');
+		Route::get('/about', 'pagesController@about')->name('about');
+		Route::get('/contact', 'pagesController@contact')->name('contact');
+		Route::get('/rooms', 'pagesController@rooms')->name('rooms');
 
-Route::prefix('admin')->namespace('admin')->group(function(){
+         ////---------------------Admin side--------------------////
+        Route::prefix('admin')->namespace('admin')->group(function(){
+        ////---------------------Login--------------------////
+        Route::get('login','pagesController@login')->name('admin.login');
+        ////---------------------Dashboard--------------------////	
 		Route::get('dashboard','pagesController@dashboard')->name('admin.dashboard');
-		Route::get('rooms',function(){
-			return "rooms";
-		});
+		////---------------------Bookings--------------------////
+		Route::get('edit_customers','pagesController@edit_customers')->name('admin.edit_customers');
+		Route::get('customers','pagesController@customers')->name('admin.customers');
+		Route::get('add_customers','pagesController@add_customers')->name('admin.add_customers');
+        ////---------------------customers--------------------//// 
+		Route::get('booking','pagesController@booking')->name('admin.booking');
+		Route::get('edit_booking','pagesController@edit_booking')->name('admin.edit_booking');
+		Route::get('add_booking','pagesController@add_booking')->name('admin.add_booking');
+		////---------------------rooms--------------------//// 
+		Route::get('rooms','pagesController@rooms')->name('admin.rooms');
+		Route::get('edit_rooms','pagesController@edit_rooms')->name('admin.edit_rooms');
+		Route::get('add_rooms','pagesController@add_rooms')->name('admin.add_rooms');
+
+
+		// Route::get('rooms',function(){
+		// 	return "rooms";
+		// });
 });
 
 Route::prefix('customer')->middleware('auth')->namespace('customer')->group(function(){
